@@ -1,0 +1,41 @@
+\begin{tikzpicture}
+    % Help lines
+    %\draw[help lines] (-6,-4) grid (6,4);
+
+    % Input space
+    \draw[smooth cycle, tension=0.4] plot coordinates{(-6,-1) (-4.5,3) (-2,2) (-3.5,-2)};
+    \coordinate (M) at (-4,3.5);
+    \node at (M) {$\X$};
+    \draw [color=black!30!green] (-4,0.4) ellipse (1.2cm and 2.3cm);
+    \draw (-4,0.5) node {$+$};
+    \coordinate (X) at (-4,0);
+    \node at (X) {$x$};
+    \coordinate (B) at (-3.95,1.7);
+    \node [color=black!30!green] at (B) {$\tilde{b}(x,\delta)$};
+    \draw [color=blue] (-4,0.4) circle (0.75);
+    \coordinate (BE) at (-4,-0.75);
+    \node [color=blue] at (BE) {$\overline{b}(x,\epsilon)$};
+
+    % Probability simplex
+    \draw (0,-2) -- (6,-2) -- (3,3.2) -- cycle;
+    \coordinate (D) at (4,3);
+    \node at (D) {$\Delta^m$};
+    \draw (1.5,0.6) -- (3,-0.27) -- (3, -2);
+    \draw (3,-0.27) -- (4.5,0.6);
+
+    % Image
+    \draw (2,-0.9) node {$+$};
+    \coordinate (I) at (2,-1.5);
+    \node at (I) {$f(x)$};
+    \draw [color=black!30!green] (2,-1) circle (1);
+    \coordinate (IB) at (2,-2.5);
+    \node [color=black!30!green] at (IB) {$b(f(x),\delta)$};
+    \draw [dashed] (2,-0.9) -- (3,-0.9);
+    \coordinate (R) at (2.5,-0.6);
+    \node at (R) {$\delta$};
+
+    % Smooth map
+    \draw [->] (-2,1) -- (1.5,1);
+    \coordinate (F) at (-0.25,1.5);
+    \node at (F) {$f$};
+\end{tikzpicture}
